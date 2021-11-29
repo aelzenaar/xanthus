@@ -1,6 +1,6 @@
 # xanthus
 
-    just finished the iliad for the first time & can say decisively that the funniest moment in all 24 books is when a horse who has previously never spoken speaks just long enough to prophesy Achilles' death & Achilles, very understandably, is like "shut the fuck up. you're a horse"
+> just finished the iliad for the first time & can say decisively that the funniest moment in all 24 books is when a horse who has previously never spoken speaks just long enough to prophesy Achilles' death & Achilles, very understandably, is like "shut the fuck up. you're a horse"
 
 
 I should be writing a conference talk for Thursday and working on my thesis, but instead I am working on a replacement for [the bad pensieve](https://github.com/aelzenaar/bucephalus) which I wrote
@@ -42,3 +42,22 @@ three years ago.
  * [Flask](https://flask.palletsprojects.com/en/2.0.x/)
  * [XKCD 1024](https://xkcd.com/1024/), [XKCD 1743](https://xkcd.com/1743/)
  * [SE api](https://api.stackexchange.com/)
+
+
+## Thus, a list of features for the new thing.
+ * Tags
+ * Long/short fortunes
+ * Recent documents
+ * Search (?)
+ * Xournal++ integration
+ * Heirachical structure with top-level indexes that can store related links (external links, and "see also" links) etc --- store files in the filesystem (so editable) with metadata in hidden files
+   and then run a script to generate HTML and push online
+ * Embed images
+ * Embed PDFs
+ * Version control integration
+ * Task manager
+ * Pinning documents
+
+## Things not to be included
+ * LaTeX integration (too much hassle & too annoying)
+ * Geogebra embedding (not very useful)
