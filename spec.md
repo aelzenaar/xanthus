@@ -15,18 +15,20 @@ The basic workflow is as follows:
   - `"links"` -  a list of URLs to include links to
   - `"photos"` - a list of images to include in a gallery
   - `"pinned"` - a list of files contained in the directory to pin at the top of the page, user added
-  - `"autopinned"` -
+  - `"autopinned"` - list of autopinned files (see `"autopins"` below)
   - `"texts"` - a list of short text messages to include
   - `"fortune"` - a single text to include at the bottom of the page, randomly generated at compile time when the `.xanthus` file is generated
 
  * The root directory `.xanthus` file will necessarily contain key-value `"root": true` (this is to prevent the user accidentally running commands in a deeper directory, so we can search
-   back up the file tree and find the root directory). Other keys which appear only in the root directory:
-  - `htmldir` - directory in which to place compiled HTML tree
+   back up the file tree and find the root directory).
+  - The root directory is also the git root directory
+  - Compiled HTML files should not be placed in the root directory - compilation process should be deterministic (based only on contents of the directory tree at compile time). The `"htmldir"` key may be
+    used to specify the output directory. Default will be `~/xanthus.out/`.
 
  * The following directives if appearing in a `.xanthus` file will propagate down to the directories contained in the current one:
   - `"autopins"` - a list of regexps which will be compared with filenames; matching files in each subdirectory will be added to the `"autopinned"` list of that subdirectory
-    when `x autopin` is run.
-
+    when `x autopin` is run. For instance, one might want all the PDFs to be listed at the top level.
+  - `"project"` - a short human-readable name for the project that this subdirectory tree corresponds to
 
 ## Commands needed
 
@@ -42,4 +44,31 @@ The basic workflow is as follows:
  * `x compile` or `xc` - compile to static HTML directory structure
  * `x web` or `xw` - push compiled HTML to web
 
+
+## HTML pages
+
+```
+
+  HEADER
+  ======
+
+  SHORT FORTUNE
+
+
+  LIST OF PINS
+
+  LIST OF LINKS
+
+  LIST OF PHOTOS
+
+  LIST OF AUTOPINS
+
+  ===
+
+  LIST OF FILES WITH CREATE/MODIFY DATES ETC
+
+  ===
+  FOOTER
+
+```
 
