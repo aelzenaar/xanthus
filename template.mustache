@@ -9,33 +9,44 @@
   <body>
     <header>
       <h1>Index of {{path}}</h1>
+      <div id="project_info">
+        <p>Part of <a href="{{project_toplevel_url}}">{{project}}</a></p>.
+        <p>Part of <a href="{{home_link}}">{{installation_title}}</a></p>.
+      </div>
       <div id="short_fortune">{{fortune_short}}</div>
       <div id="pins" class="item_list">
         <ul>
           {{#pins}}
-            <a href="{{url}}">{{title}}</a>
+            <li><a href="{{url}}">{{title}}</a>
           {{/pins}}
         </ul>
       </div>
       <div id="links" class="item_list">
         <ul>
           {{#links}}
-            <a href="{{url}}">{{title}}</a>
+            <li><a href="{{url}}">{{title}}</a>
           {{/links}}
         </ul>
       </div>
       <div id="photos" class="item_list">
         <ul>
           {{#photos}}
-            <a href="{{url}}"><img src="{{url}}"/><br/>{{title}}</a>
+            <li><a href="{{url}}"><img src="{{url}}"/><br/>{{title}}</a>
           {{/photos}}
         </ul>
       </div>
       <div id="autopins" class="item_list">
         <ul>
           {{#links}}
-            <a href="{{url}}">{{title}}</a>
+            <li><a href="{{url}}">{{title}}</a>
           {{/links}}
+        </ul>
+      </div>
+      <div id="texts" class="item_list">
+        <ul>
+          {{#texts}}
+            <li>{{text}}
+          {{/texts}}
         </ul>
       </div>
       <nav class="item_list">
